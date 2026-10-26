@@ -111,7 +111,7 @@ build\voxelize.exe model.obj output.c --resolution 16
 
 ## Earlier prototype
 
-Captures from the legacy scenes kept under `.github/legacy` (ball pit, melee, shooter).
+Captures from the legacy scenes (ball pit, melee, shooter). The prototype's source lives on the [`legacy`](https://github.com/rmguney/patch-engine/tree/legacy) branch.
 
 ![ball pit](.github/readme/ballpit.gif)
 ![melee](.github/readme/melee.gif)
