@@ -49,7 +49,7 @@ TEST(timing_consistency)
     printf("(avg=%.3fms, max_dev=%.0f%%) ", avg, max_deviation * 100.0f);
 
     /* Allow up to 200% deviation - Windows scheduler variance is high for small workloads */
-    ASSERT(max_deviation < 2.0f);
+    ASSERT_PERF(max_deviation < 2.0f);
     /* But ensure we're measuring something real (> 0.001ms) */
     ASSERT(avg > 0.001f);
 

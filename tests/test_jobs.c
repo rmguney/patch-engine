@@ -187,7 +187,8 @@ TEST(platform_cond_wakes_and_times_out)
     }
     platform_mutex_unlock(h.mutex);
     ASSERT(timed_out);
-    ASSERT(waited > 0.02f);
+    /* Windows timeouts may expire up to one timer tick (15.6 ms at the default resolution) early */
+    ASSERT(waited > 0.01f);
 
     /* A thread woken by a broadcast answers through the same condition variable */
     PlatformThread *thread = platform_thread_start(handshake_thread, &h);
