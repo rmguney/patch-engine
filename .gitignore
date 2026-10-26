@@ -45,5 +45,3 @@ Thumbs.db
 !/README.md
 !.github/readme/
 !.github/workflows/
-!.github/legacy/
-!.github/legacy/CMakeLists.txt
